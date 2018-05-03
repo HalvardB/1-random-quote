@@ -4,8 +4,6 @@
 - If you click on the button you can see a new random quote.
 - If you wait longer than 5 seconds, the page will automatically change the quote for you.
 - The background color changes to a random color every time the quote changes.
-
-- I tried to add a feature where you
 */
 
 let quoteId;
@@ -25,7 +23,7 @@ function getRandomQuote(){
 // Print function
 function printQuote(randomQuote){
 
-  // Printing the Quote and Category/Title
+  // Printing the Quote and Category
   quoteOutput.innerHTML = randomQuote.quote;
   categoryOutput.innerHTML = randomQuote.category;
 
@@ -43,7 +41,7 @@ button.addEventListener("click", () =>{
   printQuote(randomQuote);
   changeBackgound();
 
-  // Resets the countdown.
+  // Resets the countdown timer.
   clearCountdown();
   newQuoteCountdown = window.setInterval(loading, 5000);
 });
@@ -53,7 +51,7 @@ function changeBackgound(){
   document.body.style.backgroundColor = randomColor();
 }
 
-// Create a random color
+// Create a random color code
 function randomColor() {
   const color = "#"+((1<<24)*Math.random()|0).toString(16); // Thank you Stackoverflow!
   return color;
