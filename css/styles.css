@@ -56,6 +56,20 @@ body {
   content: ", ";
   font-style: normal;
 }
+#pauseButton {
+  position: fixed;
+  width: 2em;
+  left: 48.5%;
+  bottom: 95px;
+  color: #fff;
+  background-color: rgba(255, 255, 255, 0);
+}
+#pauseButton:hover {
+  transform: scale(1.2);
+}
+#loadQuote:hover {
+  transform: scale(1.2);
+}
 
 #loadQuote {
   position: fixed;
